@@ -1,0 +1,211 @@
+/*---------------------------main settings starts----------------------------------*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    border-radius: inherit;
+}
+@font-face {
+    font-family: lato;
+    src: url(../font/lato-regular.ttf);
+}
+body > * {
+    font-family: lato;
+}
+main {
+    min-height: calc(100vh - 200px);
+}
+:root{
+    --main-color-1:red;
+    --main-color-2: #19194d;
+    --main-color-3: white;
+    --nav-gf-size: 1.5em;
+}
+/*---------------------------main settings ends----------------------------------*/
+/*---------------------------header parts starts----------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+#logo{
+    margin-left: 25px;
+    width: 50px;
+}
+
+nav {
+    margin-right: 25px;
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav-item{
+    color: black;
+    font-size:var(--nav-gf-size);
+}
+
+.active{
+    text-decoration: underline;
+    color:var(--main-color-1);
+}
+/*---------------------------header parts ends----------------------------------*/
+
+/*---------------------------footer parts starts----------------------------------*/
+footer {
+    min-height: 200px;
+    background-color: var(--main-color-2);
+    color: var(--main-color-3);
+    font-size: var (var(--nav-gf-size));
+}
+#footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+}
+.footer-nav-part{
+    display: flex;
+    flex-direction: column;
+}
+.footer-link-item{
+    color: var(--main-color-3);
+    margin-bottom: 15px;
+    }
+    .footer-nav-part h4{
+        text-decoration: underline;
+    }
+  .footer-nav-part:nth-of-type(3) > div >a{
+      margin-left: 2px;
+  }
+   /*---------------FOOTER parts end----------------------------------*/
+/*---------------------------abstract styles start----------------------------------*/
+.text-decor {
+    text-decoration: none;
+}
+.responsive-img{
+    width: 100%;
+    height: auto;
+}
+.more{
+    display: block;
+    width: 110px;
+    height: 40px;
+    background-color: var(--main-color-1);
+    color: var(--main-color-3);
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 900;
+}
+/*---------------------------abstract styles ends----------------------------------*/
+/*---------------------------big picture part start-------------------------------*/
+#main-picture{
+    height: 800px;
+    background-image: url(../img/img_01.jpg);
+    background-size: cover;
+    background-position: center 25%;
+    position: relative;
+}
+#slogan{
+    width: 60%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    left: 25%;
+    top: 200px;
+    padding: 25px;
+}
+#slogan >h1 {
+    color: var(--main-color-1);
+    font-size: ;
+}
+/*---------------------------big picture part start-------------------------------*/
+
+/*---------------------------main section part start-------------------------------*/
+.home-section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.background-part{
+    color: var(--main-color-3);
+    padding: 30px;
+}
+.home-section:nth-of-type(1) > .background-part{
+    background-color: var(--main-color-1);
+}
+.home-section:nth-of-type(2) > .background-part{
+    background-color: var(--main-color-2);
+}
+#methods-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.methods-partial{
+    width: 30%;
+}
+.content-part{
+    margin-top: 50px;
+    padding: 30px;
+}
+#news-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.news-partial{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+#pic-part{
+    width: 30%;
+}
+#text-part{
+    width: 67%;
+}
+/*---------------------------main section part end-------------------------------*/
+
+
+
+/*---------------------------media queries start----------------------------------*/
+@media (max-width:540px) {
+    header, nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo{
+        margin-left: 0px;
+    }
+    nav{
+        margin-right: 0px;
+    }
+    #footer-wrapper{
+        flex-direction: column;
+        padding-left: 25%;
+    }
+    #methods-wrapper{
+        flex-direction: column;
+    }
+    .methods-partial{
+        width: auto;
+        margin-top: 25px;
+    }
+    .news-partial{
+        flex-direction: column;
+    }
+    .pic-part, .text-part{
+        width: auto;
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+    nav {
+        flex-basis: 70%;
+    }
+}
+
+
+/*---------------------------media queries ends----------------------------------*/
